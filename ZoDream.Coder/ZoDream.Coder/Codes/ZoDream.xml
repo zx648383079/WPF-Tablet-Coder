@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codes>
+  <code>
+    <name>vecho</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;ech('');?&gt;</content>
+  </code>
+  <code>
+    <name>vcall</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;call('');?&gt;</content>
+  </code>
+  <code>
+    <name>vurl</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;url('');?&gt;</content>
+  </code>
+  <code>
+    <name>vget</name>
+    <description>
+    </description>
+    <content>$this-&gt;get('');</content>
+  </code>
+  <code>
+    <name>vasset</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;asset('');?&gt;</content>
+  </code>
+  <code>
+    <name>vcase</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;cas('');?&gt;</content>
+  </code>
+  <code>
+    <name>vextend</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;extend(array(
+	'layout' =&gt; array(
+            		'head'
+	))
+); 
+?&gt;</content>
+  </code>
+  <code>
+    <name>vjcs</name>
+    <description>
+    </description>
+    <content> &lt;?php $this-&gt;jcs(array(
+	'zodream.css'
+));
+?&gt;</content>
+  </code>
+  <code>
+    <name>vforeach</name>
+    <description>
+    </description>
+    <content>&lt;?php foreach ($this-&gt;get('', array()) as $value) {?&gt;
+      &lt;?php echo $value['id'];?&gt;
+&lt;?php }?&gt;</content>
+  </code>
+  <code>
+    <name>vif</name>
+    <description>
+    </description>
+    <content>&lt;?php if ($this-&gt;has('')) { ?&gt;
+
+&lt;?php }?&gt;</content>
+  </code>
+  <code>
+    <name>vtag</name>
+    <description>
+    </description>
+    <content>&lt;?php $this-&gt;tag('', '')?&gt;</content>
+  </code>
+</codes>

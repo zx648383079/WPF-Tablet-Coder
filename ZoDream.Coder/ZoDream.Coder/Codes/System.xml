@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codes>
+  <code>
+    <name>基本用法</name>
+    <description>app/app.js:
+  require('./local-dep');    // -&gt; /app/local-dep.js
+  var $ = require('jquery'); // -&gt; /lib/jquery.js</description>
+    <content> System.config({
+    baseURL: '/lib/',
+    paths: {
+      'app/*': '/app/*.js'
+    }
+  });
+  System.import('app/app')</content>
+  </code>
+  <code>
+    <name>匿名使用</name>
+<description></description>
+<content>var System = require('systemjs');
+System.transpiler = 'traceur';
+System.import('./app.js').then(function(m) {
+  console.log(m);
+});</content></code>
+</codes>

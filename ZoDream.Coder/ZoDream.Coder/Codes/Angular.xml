@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codes>
+  <code>
+    <name>Component</name>
+    <description>Angular Component</description>
+    <content>var AppComponent = ng
+  .Component({
+    selector: 'my-app',
+    template: '<h1>My First Angular 2 App</h1>'
+  })
+  .Class({
+    constructor: function () { }
+  });</content>
+  </code>
+  <code>
+    <name>bootstrap</name>
+    <description>
+    </description>
+    <content>import {bootstrap}    from 'angular2/platform/browser';
+import {AppComponent} from './app.component';
+bootstrap(AppComponent);</content>
+  </code>
+  <code>
+    <name>hero-form.component.ts</name>
+    <description>
+    </description>
+    <content>import {Component} from 'angular2/core';
+import {NgForm}    from 'angular2/common';
+import { Hero }    from './hero';
+@Component({
+  selector: 'hero-form',
+  templateUrl: 'app/hero-form.component.html'
+})
+export class HeroFormComponent {
+  powers = ['Really Smart', 'Super Flexible',
+            'Super Hot', 'Weather Changer'];
+  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  submitted = false;
+  onSubmit() { this.submitted = true; }
+  // Reset the form with a new hero AND restore 'pristine' class state
+  // by toggling 'active' flag which causes the form
+  // to be removed/re-added in a tick via NgIf
+  // TODO: Workaround until NgForm has a reset method (#6822)
+  active = true;
+  newHero() {
+    this.model = new Hero(42, '', '');
+    this.active = false;
+    setTimeout(()=&gt; this.active=true, 0);
+  }
+}</content>
+  </code>
+  <code>
+    <name>hero.ts</name>
+    <description>
+    </description>
+    <content>export class Hero {
+  constructor(
+    public id: number,
+    public name: string,
+    public power: string,
+    public alterEgo?: string
+  ) {  }
+}</content>
+  </code>
+  <code>
+    <name>app.component.ts</name>
+    <description>
+    </description>
+    <content>import {Component}         from 'angular2/core';
+import {HeroFormComponent} from './hero-form.component'
+@Component({
+  selector: 'my-app',
+  template: '<hero-form></hero-form>',
+  directives: [HeroFormComponent]
+})
+export class AppComponent { }</content>
+  </code>
+  <code>
+    <name>main.ts</name>
+    <description>
+    </description>
+    <content>import {bootstrap}    from 'angular2/platform/browser';
+import {AppComponent} from './app.component';
+bootstrap(AppComponent);</content>
+  </code>
+  <code>
+    <name>forms.css</name>
+    <description>
+    </description>
+    <content>.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}</content>
+  </code>
+  <code>
+    <name>app/hero.ts</name>
+<description></description>
+<content>export class Hero {
+  id: number;
+  name: string;
+}</content></code>
+</codes>

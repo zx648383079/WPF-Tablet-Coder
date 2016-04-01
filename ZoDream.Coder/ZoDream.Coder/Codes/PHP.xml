@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codes>
+  <code>
+    <name>php</name>
+    <description>zhe shi ceshi </description>
+    <content>
+      public static function getPhpVersion() {
+        return phpversion();
+      }
+
+      /**
+      * 获取服务器
+      */
+      public static function getServer() {
+        return Request::getInstance()-&gt;server('SERVER_SOFTWARE');
+      }
+    </content>
+  </code>
+  <code>
+    <name>add</name>
+<description>hhhhh</description>
+<content>gggggggggggggggggggggggg</content></code>
+</codes>
