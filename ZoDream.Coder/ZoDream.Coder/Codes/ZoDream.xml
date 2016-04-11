@@ -78,4 +78,29 @@
     </description>
     <content>&lt;?php $this-&gt;tag('', '')?&gt;</content>
   </code>
+  <code>
+    <name>basicView</name>
+    <description>
+    </description>
+    <content>&lt;?php
+defined('APP_DIR') or exit();
+$this-&gt;extend(array(
+        'layout' =&gt; array(
+            'head'
+        ))
+);
+?&gt;
+
+
+
+
+
+&lt;?php
+$this-&gt;extend(array(
+        'layout' =&gt; array(
+            'foot'
+        ))
+);
+?&gt;</content>
+  </code>
 </codes>
